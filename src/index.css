@@ -1,13 +1,321 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.parent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+/* cho ra giữa cách 1 */
+.parent > div {
+  margin-bottom: 1rem;
+}
+.position {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: relative;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+/* cho ra giữa cách 2 */
+.position-v {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: relative;
+}
+.box-v {
+  /* width: 100px;
+  height: 100px; */
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* margin-top: -50px;
+  margin-left: -50px; */
+  transform: translate(-50%, -50%);
+}
+/* text */
+.text {
+  max-width: 500px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  white-space: normal;
+  /* quá kích thước thì trở thành dấu 3 chấm */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* muốn text hiện đúng 3 dòng */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* 1 từ quá dài */
+.word {
+  word-break: break-all;
+}
+span,
+b {
+  margin-right: 1rem;
+}
+/* custom select */
+.dropdown {
+  position: relative;
+  margin-top: 1rem;
+  width: 30rem;
+}
+.dropdown-select {
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: green;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.dropdown-item {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background-color 0.2s linear;
+}
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-list {
+  border-radius: 4px;
+  background-color: green;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: 0.5rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+.dropdown-list:before {
+  content: "";
+  height: 0.5rem;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  transform: translateY(-100%);
+}
+.dropdown-item:hover {
+  background-color: rgb(2, 148, 2);
+}
+/* custom select 2 */
+.dropdown-v {
+  margin-top: 1rem;
+  width: 30rem;
+  position: relative;
+}
+.dropdown-select-v {
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: green;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dropdown-v:hover .dropdown-list-v {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-list-v {
+  border-radius: 4px;
+  position: absolute;
+  background-color: green;
+  /* margin-top: 1rem; */
+  top: 110%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+.dropdown-list-v:before {
+  content: "";
+  height: 0.5rem;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  transform: translateY(-100%);
+}
+.dropdown-item-v {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background-color 0.2s linear;
+}
+.dropdown-item-v:hover {
+  background-color: rgb(2, 148, 2);
+}
+.dropdown-item-v:first-child {
+  position: relative;
+}
+.dropdown-item-v:last-child {
+}
+.dropdown-item-v:first-child:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid green;
+  transform: translateY(-100%);
+}
+.dropdown-item-v:first-child:hover:before {
+  border-bottom: 10px solid rgb(2, 148, 2);
+}
+/* selector */
+.selector > p:first-child {
+  color: red;
+}
+.selector > p:last-child {
+  color: blue;
+}
+/* thằng con thứ 2 */
+.selector > p:nth-child(2) {
+  color: green;
+}
+/* thằng con thứ 4 */
+.selector > p:nth-child(4) {
+  color: yellow;
+}
+/* thằng con thứ 2 từ dưới đếm lên */
+.selector > p:nth-last-child(2) {
+  background-color: lightskyblue;
+}
+/* ngoại trừ thằng đầu ra những thằng còn lại */
+.selector > p:not(:first-child) {
+  font-weight: 700;
+}
+/* ngoại trừ thằng cuối ra những thằng còn lại */
+.selector > p:not(:last-child) {
+  font-size: 2rem;
+}
+/* những thằng lẻ */
+.selector > p:nth-child(odd) {
+  background-color: maroon;
+}
+/* những thằng chẵn */
+.selector > p:nth-child(event) {
+}
+/* custom dấu chấm */
+.dot {
+  position: relative;
+  padding-left: 2rem;
+  margin: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.dot:before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* custom line */
+.line {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.line:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: scaleY(-50%);
+}
+.or {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+/* custom before, after finish */
+.effect {
+  text-decoration: none;
+  display: inline-block;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid orange;
+  cursor: pointer;
+  margin: 5rem;
+  transition: color 0.25s linear;
+  position: relative;
+  z-index: 1;
+}
+.effect:before {
+  content: "";
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  z-index: -1;
+  transition: all 0.25s linear;
+}
+.effect:hover:before {
+  height: 100%;
+}
+.effect:hover {
+  color: white;
+}
+.effect-v2 {
+  text-decoration: none;
+  display: inline-block;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid orange;
+  cursor: pointer;
+  margin: 5rem;
+  transition: color 0.25s linear;
+  position: relative;
+  z-index: 1;
+}
+.effect-v2:before {
+  content: "";
+  height: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  z-index: -1;
+  transition: all 0.25s linear;
+}
+.effect-v2:hover:before {
+  height: 100%;
+}
+.effect-v2:hover {
+  color: white;
 }
