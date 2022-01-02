@@ -1,6 +1,13 @@
 import "./App.css";
 import { DownOutlined } from "@ant-design/icons";
+import WOW from "wowjs";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <div className="parent">
       {/* cho ra giữa cách 1 */}
@@ -48,7 +55,7 @@ function App() {
         </a>
         {/* thẻ inline sẽ có độ rộng = nội dung mà nó chứa, nếu có nhiều thẻ inline
       nằm với nhau thì nó sẽ nằm trên 1 hàng, bị hạn chế về thuộc tính css */}
-        <p>p</p>
+        <p style={{ backgroundColor: "red" }}>p</p>
         <p>p</p>
         <p>p</p>
         <p>p</p>
@@ -115,6 +122,41 @@ function App() {
       {/* custom before, after finish */}
       <div className="effect">Effect</div>
       <div className="effect-v2">Effect</div>
+      {/* transform (hiệu ứng nghiêng, quay, zoom to, nhỏ), transition (làm chậm lại những quá trình thực thi css: nghiêng, quay, zoom to, nhỏ, ẩn, hiện) cần làm chậm quá trình nào thì bỏ tên quá trình đó vào VD: transform -> ngoài ra transition còn hỗ trợ 4 thuộc tính: ease (default), ease-in, ease-out, ease-in-out, linear -> thích nào thì dùng cái đó, thường dùng ease-in-out */}
+      <img
+        className="img"
+        alt="Image"
+        src="https://sieupet.com/sites/default/files/pictures/images/1-1473150685951-5.jpg"
+      />
+      <img
+        className="img-2"
+        alt="Image"
+        src="https://sieupet.com/sites/default/files/pictures/images/1-1473150685951-5.jpg"
+      />
+      <img
+        className="img-3"
+        alt="Image"
+        src="https://sieupet.com/sites/default/files/pictures/images/1-1473150685951-5.jpg"
+      />
+      {/* animation or use library animate.style, wowjs (scroll to will action)
+      Steps install wowjs
+      Step 1: npm install wowjs
+      Step 2: import WOW from 'wowjs';
+      Step 3: componentDidMount() {
+                  new WOW.WOW({
+                    live: false
+                }).init();
+              }
+      */}
+      <div className="key__frames">123</div>
+      <div className="key__frames-2">123</div>
+      {/* Wowjs gồm có 1 số thuộc tính: bounceInDown, bounceInUp, bounceInRight, bounceInLeft, fadeInDown, fadeInUp, fadeInRight, fadeInLeft */}
+      <h1
+        data-wow-delay="0.5s"
+        className="animate__animated animate__flash wow fadeInDown"
+      >
+        An animated element
+      </h1>
     </div>
   );
 }

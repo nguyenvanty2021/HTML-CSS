@@ -319,3 +319,86 @@ b {
 .effect-v2:hover {
   color: white;
 }
+/* transform (hiệu ứng nghiêng, quay, zoom to, nhỏ), transition (làm chậm lại những quá trình thực thi css: nghiêng, quay, zoom to, nhỏ, ẩn, hiện) cần làm chậm quá trình nào thì bỏ tên quá trình đó vào VD: transform -> ngoài ra transition còn hỗ trợ 4 thuộc tính: ease (default), ease-in, ease-out, ease-in-out, linear -> thích nào thì dùng cái đó, thường dùng ease-in-out */
+.img {
+  object-fit: contain;
+  width: 15rem;
+  height: 15rem;
+  transition: transform ease-in-out 1s;
+}
+.img:hover {
+  /* quay nghiêng 1 cái ảnh theo chiều nào đó. VD: 20deg (nghiêng theo ngược chiều kim đồng hồ, -20deg cùng chiều kim đồng hồ) 
+  Ngoài ra muốn ảnh nghiêng theo chiều X or Y thì dùng: skewX() or skewY()
+  */
+  transform: skew(20deg);
+}
+.img-2 {
+  object-fit: contain;
+  width: 15rem;
+  height: 15rem;
+  transition: transform ease-in-out 1s;
+}
+.img-2:hover {
+  /* tăng or giảm kích thước ảnh: < 1 là giảm, > 1 là tăng kích thước ảnh */
+  transform: scale(1.5);
+}
+.img-3 {
+  object-fit: contain;
+  width: 15rem;
+  height: 15rem;
+  transition: transform ease-in-out 1s;
+}
+.img-3:hover {
+  /* quay ảnh bao nhiêu độ, muốn quay theo chiều ngược lại thì VD: rotate(-30deg) */
+  transform: rotate(30deg);
+}
+/* animation or use library animate.style, wowjs (scroll to will action)
+      Steps install wowjs
+      Step 1: npm install wowjs
+      Step 2: import WOW from 'wowjs';
+      Step 3: componentDidMount() {
+                  new WOW.WOW({
+                    live: false
+                }).init();
+              }
+*/
+@keyframes colorChange {
+  /* có thể dùng from...to */
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+}
+@keyframes colorChange-2 {
+  /* hoặc theo %, số % do mình quy định */
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+}
+.key__frames {
+  width: 100%;
+  background-color: greenyellow;
+  /* colorChange sẽ thực hiện 5 lần, mỗi lần 1 giây */
+  animation: colorChange ease-in-out 1s 5;
+  /* nếu không cần vòng lặp dạng click mới mở or click mới tắt thì dùng */
+  /* animation: colorChange ease-in-out 1s; */
+}
+.key__frames-2 {
+  width: 100%;
+  background-color: greenyellow;
+  /* colorChange sẽ thực hiện vô hạn, mỗi lần 1 giây */
+  animation: colorChange-2 ease-in-out 1s infinite;
+  /* nếu không cần vòng lặp dạng click mới mở or click mới tắt thì dùng */
+  /* animation: colorChange ease-in-out 1s; */
+}
