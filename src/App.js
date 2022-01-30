@@ -157,6 +157,10 @@ function App() {
       >
         An animated element
       </h1>
+      {/* custom scrollbar */}
+      <div className="scroll">
+        <div className="force-overflow"></div>
+      </div>
     </div>
   );
 }
