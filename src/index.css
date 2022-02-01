@@ -405,12 +405,12 @@ b {
 /* scrollbar */
 .scroll {
   /* margin-left: 30px; */
-	/* float: left; */
-	height: 300px;
-	width: 65px;
-	background: #F5F5F5;
-	overflow-y: scroll;
-	/* margin-bottom: 25px; */
+  /* float: left; */
+  height: 300px;
+  width: 65px;
+  background: #f5f5f5;
+  overflow-y: scroll;
+  /* margin-bottom: 25px; */
 }
 .force-overflow {
   min-height: 450px;
@@ -427,4 +427,158 @@ b {
 .scroll::-webkit-scrollbar-track {
   /* background-color: #ccc; */
   border-radius: 100rem;
+}
+/* animation */
+.blue-parent {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* transition-property: background-color, width;
+  transition-duration: 1s, 1s;
+  transition-timing-function: ease-in-out; */
+  transition: background-color 1s ease-in-out, width 1s ease-out;
+}
+.blue-parent:hover {
+  background-color: pink;
+  width: 100px;
+}
+.yellow {
+  /* background-color: red; */
+  /* vừa đổi màu, kích thước, vừa di chuyển -> có thể kết hợp nhiều animation cùng 1 lúc */
+  animation-name: loading, move;
+  animation-duration: 1s, 1s;
+  position: relative;
+  /* số lần thực hiện animation */
+  /* animation-iteration-count: 3; */
+  /* số lần thực hiện animation */
+  animation-iteration-count: infinite, 3;
+  animation-direction: alternate;
+  /* animation-delay: 2s; */
+  animation-timing-function: ease-in-out;
+
+  /* animation: loading 1s infinite alternate ease-in-out, loading1 1s 3 alternate ease-in-out; */
+}
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-top-color: red;
+  border-right-color: burlywood;
+  border-bottom-color: chartreuse;
+  border-radius: 50%;
+  animation: circle 1s infinite linear;
+}
+@keyframes circle {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loading {
+  /* 0% {
+
+  }
+  25% {
+
+  }
+  50% {
+
+  }
+  75% {
+
+  }
+  100% {
+    
+  } */
+  from {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+  }
+}
+@keyframes move {
+  from {
+    left: 25%;
+  }
+  to {
+    left: 0;
+  }
+}
+/* before, after */
+.before > li {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+.before li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background-color: black;
+  bottom: -2px;
+  left: 0;
+  transition: width 1s ease-in-out;
+}
+.before li:hover::after {
+  width: 100%;
+}
+.card {
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+.user-info {
+  display: flex;
+  margin-bottom: 5px;
+}
+.name {
+  margin-left: 5px;
+  width: 100%;
+}
+.loading-skeleton .logo, .loading-skeleton .name, .loading-skeleton .content {
+  position: relative;
+  overflow: hidden;
+}
+.loading-skeleton .logo::before, .loading-skeleton .name::before, .loading-skeleton .content::before {
+  background-color: #dddddd;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loading-skeleton .logo::after, .loading-skeleton .name::after, .loading-skeleton .content::after {
+  background-color: #dddddd;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: skeleton 2s infinite alternate;
+  background: linear-gradient(to right, #dddddd, #ffffff 50%, #dddddd);
+}
+@keyframes skeleton {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 50%;
+  }
 }

@@ -161,6 +161,53 @@ function App() {
       <div className="scroll">
         <div className="force-overflow"></div>
       </div>
+      {/* animation */}
+      <div className="blue-parent">
+        <div className="blue"></div>
+      </div>
+      <div className="yellow"></div>
+      <div className="loading"></div>
+      {/* before, after */}
+      <ul className="before">
+        <li>Home</li>
+        <li>Profile</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      {/* bỏ loading-skeleton sẽ thành UI thường, thêm loading-skeleton sẽ thành loading skeleton */}
+      <div className="card loading-skeleton">
+        <div className="user-info">
+          <div className="logo">
+            <img src="https://picsum.photos/50/50" alt="" />
+          </div>
+          <div className="name">HOLETEX</div>
+        </div>
+        <div className="content">
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem
+        </div>
+      </div>
+      {/* bỏ loading-skeleton sẽ thành UI thường, thêm loading-skeleton sẽ thành loading skeleton */}
+      <div className="card">
+        <div className="user-info">
+          <div className="logo">
+            <img src="https://picsum.photos/50/50" alt="" />
+          </div>
+          <div className="name">HOLETEX</div>
+        </div>
+        <div className="content">
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+          lorem lorem lorem lorem lorem lorem lorem lorem
+        </div>
+      </div>
     </div>
   );
 }
