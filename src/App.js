@@ -1,12 +1,30 @@
 import "./App.css";
 import { DownOutlined } from "@ant-design/icons";
 import WOW from "wowjs";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 function App() {
   useEffect(() => {
     new WOW.WOW({
       live: false,
     }).init();
+    Aos.init({
+      // 1 là duration 2000 thôi
+      //duration:2000
+      // 2 là dùng cả 4 thuộc tính này
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+      // disable: 'mobile'
+      //  disable: window.innerWidth < 1024
+      //  disable: function () {
+      // var maxWidth = 1024;
+      // return window.innerWidth < maxWidth;
+      // startEvent: 'someCoolEvent'
+  //}
+    })
   }, []);
   return (
     <div className="parent">
@@ -157,6 +175,57 @@ function App() {
       >
         An animated element
       </h1>
+      {/* aos */}
+      <div data-aos="fade-up" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-right" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div  data-aos="fade-up-right" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-down-right" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="flip-right" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+
+      <div data-aos="flip-down" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="zoom-in" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div  data-aos="zoom-in-up" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="zoom-in-left" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="zoom-out" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+
+
+
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="top-center" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="center-center" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-center" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+
+
+
+      <div data-aos="zoom-out-down" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="zoom-out-right" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div  data-aos="fade-up"
+     data-aos-duration="3000" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+
+
+<div data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
       {/* custom scrollbar */}
       <div className="scroll">
         <div className="force-overflow"></div>
