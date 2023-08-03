@@ -15,7 +15,7 @@ function App() {
       // 2 là dùng cả 4 thuộc tính này
       offset: 200,
       duration: 600,
-      easing: 'ease-in-sine',
+      easing: "ease-in-sine",
       delay: 100,
       // disable: 'mobile'
       //  disable: window.innerWidth < 1024
@@ -23,16 +23,19 @@ function App() {
       // var maxWidth = 1024;
       // return window.innerWidth < maxWidth;
       // startEvent: 'someCoolEvent'
-  //}
-    })
+      //}
+    });
   }, []);
   return (
+    // // thư viện css cho button
+    // https://ui-buttons.web.app/?utm_source=j2team&utm_medium=url_shortener&utm_campaign=100-css-button&fbclid=IwAR3_vnvLt3Ib4_IL-cETHwVFreBMKXSJKoxd8iQQK84m1MxJRM_3yTLJEwc
     <div className="parent">
-      {/* cho ra giữa cách 1 */}
+      {/* Example 1 */}
       <div className="position">
         <div className="box"></div>
       </div>
-      {/* cho ra giữa cách 2 */}
+
+      {/* Example 2 */}
       <div className="position-v">
         <div className="box-v">
           Lorem ipsum adsdskdajs dasjd aslkdasdsakdlasdasdas djkasldasd
@@ -42,9 +45,9 @@ function App() {
           dasdas dasdasdslk
         </div>
       </div>
-      {/* text */}
+
+      {/* Example 3 */}
       <div className="text">
-        {" "}
         Lorem ipsum adsdskdajs dasjd aslkdasdsakdlasdasdas djkasldasd
         dasdasdasdasklj dasdasdasdasjdk dada sdsdasdkldasdasdas dasdas
         dasdasdslk Lorem ipsum adsdskdajs dasjd aslkdasdsakdlasdasdas djkasldasd
@@ -55,12 +58,14 @@ function App() {
         dasdasdasdasklj dasdasdasdasjdk dada sdsdasdkldasdasdas dasdas
         dasdasdslk
       </div>
-      {/* 1 từ quá dài  */}
+
+      {/* Example 4 */}
       <div className="word">
         dssasdsadhsajdashdajsdhadhajkdhakdhajdhaskdjhakjdhasjdhadjhasdjasdhsdjkahdajshdjkasdhajksdhasjdhajkdahdjahdjkashdjaksdhajequweyqwueyqwuieqiywudyasuaysuidasyduiasdyasuidsaydssasdsadhsajdashdajsdhadhajkdhakdhajdhaskdjhakjdhasjdhadjhasdjasdhsdjkahdajshdjkasdhajksdhasjdhajkdahdjahdjkashdjaksdhajequweyqwueyqwuieqiywudyasuaysuidasyduiasdyasuidsay
       </div>
+
+      {/* Example 5 */}
       <div>
-        {" "}
         {/* thẻ inline và thẻ block */}
         <span>span</span>
         <span>span</span>
@@ -99,7 +104,8 @@ function App() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      {/* custom select */}
+
+      {/* Example 6 */}
       <div className="dropdown">
         <div className="dropdown-select">
           <span>Selected item</span>
@@ -111,6 +117,8 @@ function App() {
           <p className="dropdown-item">A</p>
         </div>
       </div>
+
+      {/* Example 7 */}
       {/* custom select 2*/}
       <div className="dropdown-v">
         <div className="dropdown-select-v">
@@ -123,6 +131,8 @@ function App() {
           <p className="dropdown-item-v">A</p>
         </div>
       </div>
+
+      {/* Example 8 */}
       {/* selector */}
       <div className="selector">
         <p>item</p>
@@ -131,12 +141,18 @@ function App() {
         <p>item</p>
         <p>item</p>
       </div>
+
+      {/* Example 9 */}
       {/* custom dấu chấm */}
       <div className="dot">Nguyễn Văn Tỷ</div>
+
+      {/* Example 10 */}
       {/* custom line */}
       <div className="line">
         <span className="or">or</span>
       </div>
+
+      {/* Example 11 */}
       {/* custom before, after finish */}
       <div className="effect">Effect</div>
       <div className="effect-v2">Effect</div>
@@ -176,56 +192,281 @@ function App() {
         An animated element
       </h1>
       {/* aos */}
-      <div data-aos="fade-up" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-right" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div  data-aos="fade-up-right" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-down-right" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="flip-right" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div
+        data-aos="fade-up"
+        style={{
+          backgroundColor: "red",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-right"
+        style={{
+          backgroundColor: "green",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up-right"
+        style={{
+          backgroundColor: "blue",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-down-right"
+        style={{
+          backgroundColor: "orange",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="flip-right"
+        style={{
+          backgroundColor: "pink",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
 
-      <div data-aos="flip-down" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="zoom-in" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div  data-aos="zoom-in-up" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="zoom-in-left" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="zoom-out" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div
+        data-aos="flip-down"
+        style={{
+          backgroundColor: "red",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="zoom-in"
+        style={{
+          backgroundColor: "green",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="zoom-in-up"
+        style={{
+          backgroundColor: "blue",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="zoom-in-left"
+        style={{
+          backgroundColor: "orange",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="zoom-out"
+        style={{
+          backgroundColor: "pink",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
 
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        style={{
+          backgroundColor: "red",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-center"
+        style={{
+          backgroundColor: "green",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-center"
+        style={{
+          backgroundColor: "blue",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
 
+      <div
+        data-aos="zoom-out-down"
+        style={{
+          backgroundColor: "red",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="zoom-out-right"
+        style={{
+          backgroundColor: "green",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        style={{
+          backgroundColor: "blue",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        style={{
+          backgroundColor: "orange",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        style={{
+          backgroundColor: "pink",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
 
-      <div data-aos="fade-up"
-     data-aos-anchor-placement="top-center" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-up"
-     data-aos-anchor-placement="center-center" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div  data-aos="fade-up"
-     data-aos-anchor-placement="bottom-center" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-
-
-
-      <div data-aos="zoom-out-down" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="zoom-out-right" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div  data-aos="fade-up"
-     data-aos-duration="3000" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-
-
-<div data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500" style={{backgroundColor:"red",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0" style={{backgroundColor:"green",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" style={{backgroundColor:"blue",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" style={{backgroundColor:"orange",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
-      <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" style={{backgroundColor:"pink",width:"500px",height:"500px",marginBottom:"5rem"}} >123</div>
+      <div
+        data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500"
+        style={{
+          backgroundColor: "red",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0"
+        style={{
+          backgroundColor: "green",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        style={{
+          backgroundColor: "blue",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        style={{
+          backgroundColor: "orange",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        style={{
+          backgroundColor: "pink",
+          width: "500px",
+          height: "500px",
+          marginBottom: "5rem",
+        }}
+      >
+        123
+      </div>
       {/* custom scrollbar */}
       <div className="scroll">
         <div className="force-overflow"></div>

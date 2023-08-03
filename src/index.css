@@ -4,10 +4,10 @@
   align-items: center;
   flex-direction: column;
 }
-/* cho ra giữa cách 1 */
 .parent > div {
   margin-bottom: 1rem;
 }
+/* Example 1 */
 .position {
   width: 500px;
   height: 500px;
@@ -24,7 +24,8 @@
   margin-top: -50px;
   margin-left: -50px;
 }
-/* cho ra giữa cách 2 */
+
+/* Example 2 */
 .position-v {
   width: 500px;
   height: 500px;
@@ -42,7 +43,8 @@
   margin-left: -50px; */
   transform: translate(-50%, -50%);
 }
-/* text */
+
+/* Example 3 */
 .text {
   max-width: 500px;
   letter-spacing: 1px;
@@ -56,7 +58,8 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-/* 1 từ quá dài */
+
+/* Example 4 */
 .word {
   word-break: break-all;
 }
@@ -64,6 +67,7 @@ span,
 b {
   margin-right: 1rem;
 }
+/* Example 6 */
 /* custom select */
 .dropdown {
   position: relative;
@@ -114,6 +118,8 @@ b {
 .dropdown-item:hover {
   background-color: rgb(2, 148, 2);
 }
+
+/* Example 7 */
 /* custom select 2 */
 .dropdown-v {
   margin-top: 1rem;
@@ -131,7 +137,6 @@ b {
   font-size: 1.6rem;
   cursor: pointer;
 }
-
 .dropdown-v:hover .dropdown-list-v {
   opacity: 1;
   visibility: visible;
@@ -182,6 +187,8 @@ b {
 .dropdown-item-v:first-child:hover:before {
   border-bottom: 10px solid rgb(2, 148, 2);
 }
+
+/* Example 8 */
 /* selector */
 .selector > p:first-child {
   color: red;
@@ -216,6 +223,8 @@ b {
 /* những thằng chẵn */
 .selector > p:nth-child(event) {
 }
+
+/* Example 9 */
 /* custom dấu chấm */
 .dot {
   position: relative;
@@ -235,6 +244,8 @@ b {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* Example 10 */
 /* custom line */
 .line {
   text-align: center;
@@ -258,6 +269,7 @@ b {
   position: relative;
   z-index: 2;
 }
+
 /* custom before, after finish */
 .effect {
   text-decoration: none;
@@ -327,7 +339,7 @@ b {
   transition: transform ease-in-out 1s;
 }
 .img:hover {
-  /* quay nghiêng 1 cái ảnh theo chiều nào đó. VD: 20deg (nghiêng theo ngược chiều kim đồng hồ, -20deg cùng chiều kim đồng hồ) 
+  /* quay nghiêng 1 cái ảnh theo chiều nào đó. VD: 20deg (nghiêng theo ngược chiều kim đồng hồ, -20deg cùng chiều kim đồng hồ)
   Ngoài ra muốn ảnh nghiêng theo chiều X or Y thì dùng: skewX() or skewY()
   */
   transform: skew(20deg);
@@ -490,7 +502,7 @@ b {
 
   }
   100% {
-    
+
   } */
   from {
     background-color: blue;
@@ -546,11 +558,15 @@ b {
   margin-left: 5px;
   width: 100%;
 }
-.loading-skeleton .logo, .loading-skeleton .name, .loading-skeleton .content {
+.loading-skeleton .logo,
+.loading-skeleton .name,
+.loading-skeleton .content {
   position: relative;
   overflow: hidden;
 }
-.loading-skeleton .logo::before, .loading-skeleton .name::before, .loading-skeleton .content::before {
+.loading-skeleton .logo::before,
+.loading-skeleton .name::before,
+.loading-skeleton .content::before {
   background-color: #dddddd;
   content: "";
   width: 100%;
@@ -561,7 +577,9 @@ b {
   right: 0;
   bottom: 0;
 }
-.loading-skeleton .logo::after, .loading-skeleton .name::after, .loading-skeleton .content::after {
+.loading-skeleton .logo::after,
+.loading-skeleton .name::after,
+.loading-skeleton .content::after {
   background-color: #dddddd;
   content: "";
   width: 100%;
